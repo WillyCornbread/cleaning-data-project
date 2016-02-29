@@ -11,8 +11,8 @@ features[, 2] <- as.character(features[, 2])
 # only want the mean and sd stuff
 desired_features <- grep(".*mean.*|.*std.*", features[,2])
 desired_features.names <- features[desired_features,2]
-desired_features.names = gsub('-mean', 'Mean', desired_features.names)
-desired_features.names = gsub('-std', 'Std', desired_features.names)
+desired_features.names <- gsub('-mean', 'Mean', desired_features.names)
+desired_features.names <- gsub('-std', 'Std', desired_features.names)
 desired_features.names <- gsub('[-()]', '', desired_features.names)
 
 # actual training data
